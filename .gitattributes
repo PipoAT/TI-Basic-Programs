@@ -1,2 +1,3 @@
 # `.gitattributes` file which reclassifies files as LabVIEW so Github's Linguist can show code contents by language:
 *.8xp linguist-language=TI Program
+*.8xp.txt linguist-language=TI Program
