@@ -1,0 +1,573 @@
+ClrHome
+Disp " "
+Disp "ALGEBRA  PROGRAM"
+Disp " FOR TI-84 PLUS "
+Disp " BY ANDREW PIPO "
+Disp " "
+Disp "  OS: C.01.0.0  "
+Disp " "
+Pause 
+
+Lbl M
+Menu("HOME MENU:","AREA/VOLUME",AV,"DEG/RAD",DR,"EXPONENT LAWS",EL,"GROWTH/DECAY",GD,"[NEXT PAGE]",M2,"[QUIT PROGRAM]",99)
+
+Lbl 99
+ClrHome
+Stop
+
+Lbl AV
+ClrHome
+Menu("SELECT TASK:","AREA",35,"VOLUME",36,"[GO BACK]",M)
+
+Lbl 35
+ClrHome
+Menu("WHICH ONE?","SQUARE",1,"RECTANGLE",2,"CIRCLE",3,"TRIANGLE",4,"TRAPEZOID",5,"[GO BACK]",M)
+
+Lbl 1
+ClrHome
+Disp "SIDES:"
+Prompt S
+
+S²→X
+
+Disp X
+Pause 
+Goto M
+
+Lbl 2
+ClrHome
+Disp "LENGTH:"
+Prompt L
+Disp "WIDTH:"
+Prompt W
+
+(L*W)→X
+
+Disp X
+Pause 
+Goto M
+
+Lbl 3
+ClrHome
+Disp "RADIUS:"
+Prompt R
+
+(π*R*R)→X
+
+Disp X
+Pause 
+Goto M
+
+Lbl 4
+ClrHome
+Disp "BASE:"
+Prompt B
+Disp "HEIGHT:"
+Prompt H
+
+(12(B*H))→X
+
+Disp X
+Pause 
+Goto M
+
+Lbl 5
+ClrHome
+Disp "BASE 1:"
+Prompt B
+Disp "BASE 2:"
+Prompt C
+Disp "HEIGHT:"
+Prompt H
+
+(12*(B+C)*H)→X
+
+Disp X
+Pause 
+Goto M
+
+
+Lbl DR
+ClrHome
+Menu("DEG/RAD:","ARC LENGTH",13,"FIND ANGLE",14,"FIND RADIUS",15,"CONVERT TO RAD",16,"CONVERT TO DEG",34,"[GO BACK]",M)
+
+Lbl 13
+ClrHome
+Disp "RADIUS:"
+Prompt R
+Disp "ANGLE:"
+Prompt X
+
+(R*X)→S
+
+Disp S
+Pause 
+Goto M
+
+Lbl 14
+ClrHome
+Disp "ARC LENGTH:"
+Prompt S
+Disp "RADIUS:"
+Prompt R
+
+(S/R)→X
+
+Disp X
+Pause 
+Goto M
+
+Lbl 15
+ClrHome
+Disp "ARC LENGTH:"
+Prompt S
+Disp "ANGLE:"
+Prompt X
+
+(S/X)→R
+
+Disp R
+Pause 
+Goto M
+
+Lbl 16
+ClrHome
+Disp "DEGREES:"
+Prompt D
+
+(D*(π/180))→R
+
+Disp RFrac
+Pause 
+Goto M
+
+Lbl 34
+ClrHome
+Disp "RADIANS:"
+Prompt R
+
+(R*(180/π))→D
+
+Disp DFrac
+Pause 
+Goto M
+
+Lbl EL
+ClrHome
+Disp "X^0 = 1"
+Disp " "
+Disp "(X^A)(X^B)"
+Disp "= X^(A+B)"
+Disp " "
+Pause 
+ClrHome
+Disp "(X^A)/(X^B)"
+Disp "= X^(A-B)"
+Disp " "
+Disp "(X^A)^B"
+Disp " = X^(A*B)"
+Pause 
+ClrHome
+Disp "X^­A = 1/X^A"
+Disp " "
+Disp "1/X^­A = X^A"
+Pause 
+Goto M
+
+
+Lbl GD
+ClrHome
+Menu("Select Task:","EXP. GROWTH",17,"EXP. DECAY",18,"CONT. GROW/DECAY",19,"SIMPLE INT.",20,"COMPOUND INT.",21,"CONT. INT",22,"[HOME MENU]",M)
+
+Lbl 17
+ClrHome
+Disp "ORIG. AMT:"
+Prompt A
+Disp "RATE:"
+Prompt R
+Disp "TIME:"
+Prompt T
+
+(A(1+R)^T)→X
+
+Disp "NEW AMT:",X
+Pause 
+Goto M
+
+Lbl 18
+ClrHome
+Disp "ORIG. AMT:"
+Prompt A
+Disp "RATE:"
+Prompt R
+Disp "TIME:"
+Prompt T
+
+(A(1+R)^T)→X
+
+Disp "New Amount:",X
+Pause 
+Goto M
+
+Lbl 19
+ClrHome
+Disp "INITIAL AMT:"
+Prompt A
+Disp "RATE:"
+Prompt R
+Disp "TIME:"
+Prompt T
+
+(A^(RT))→X
+
+Disp "NEW AMT:",X
+Pause 
+Goto M
+
+Lbl 20
+ClrHome
+Disp "PRINCIPLE:"
+Prompt P
+Disp "INT RATE:"
+Prompt R
+Disp "TIME (YRS):"
+Prompt T
+
+(P*R*T)→I
+
+Disp "INTEREST:",I
+Pause 
+Goto M
+
+Lbl 21
+ClrHome
+Disp "PRINCIPLE:"
+Prompt P
+Disp "INT RATE:"
+Prompt R
+Disp "# TIMES COMP:"
+Prompt N
+Disp "TIME:"
+Prompt T
+
+(P(1+(R/N))^(NT))→A
+
+Disp "AMOUNT:",A
+Pause 
+Goto M
+
+
+Lbl 22
+ClrHome
+Disp "PRINCIPLE:"
+Prompt P
+Disp "INT RATE:"
+Prompt R
+Disp "TIME:"
+Prompt T
+
+(P^(RT))→A
+
+Disp "AMOUNT:",A
+Pause 
+Goto M
+
+Lbl M2
+Menu("HOME MENU:","<,>,=",GT,"LOGATITHMS",LG,"OPERATIONS",OF,"PYTHAG.",PT,"[NEXT PAGE]",M3,"[PRIOR PAGE]",M)
+
+Lbl GT
+ClrHome
+Disp "> GREATER THAN"
+Disp "< LESS THAN"
+Disp "≥ GREATER/EQUAL"
+Disp "≤ LESS/EQUAL"
+Pause 
+Goto M
+
+Lbl LG
+ClrHome
+Disp "log(XY)="
+Disp "log(X)+log(Y)"
+Disp " "
+Disp "log(X/Y)"
+Disp "=log(X)-log(Y)"
+Pause 
+ClrHome
+Disp "log(X)^P"
+Disp "=Plog(X)"
+Disp " "
+Disp "log(X)"
+Disp "=log(Y), X=Y"
+Pause 
+ClrHome
+Disp "COMMON LOG:"
+Disp "log(X)=Y
+Disp "BASE 10"
+Disp " "
+Disp "NATURAL LOG:"
+Disp "ln(X)=Y"
+Pause 
+ClrHome
+Disp "log(X), BASE B ="
+Disp "log(X)/log(B) OR"
+Disp "ln(X)/ln(B)"
+Pause 
+Goto M
+
+
+Lbl OF
+ClrHome
+Disp "(F+G)(X)"
+Disp "= F(X)+G(X)"
+Disp " "
+Disp "(F-G)(X)"
+Disp "= F(X)+G(X)"
+Pause 
+ClrHome
+Disp "(F*G)(X)"
+Disp "= F(X)*G(X)"
+Disp " "
+Disp "(F/G)(X)"
+Disp "F(X)/G(X)"
+Pause 
+ClrHome
+Disp "(F OF G)(X)"
+Disp "= F{G(X)}"
+Pause 
+Goto M
+
+Lbl PT
+ClrHome
+Disp "SIDES:"
+Prompt A
+Prompt B
+
+(A²+B²)→C
+√(C)→D
+
+Disp D
+Pause 
+Goto M
+
+Lbl M3
+Menu("HOME MENU:","QUADRATICS",QU,"RATE OF CHANGE",RC,"SEQ/SERIES",SS,"RADICALS",SR,"[NEXT PAGE]",M4,"[PRIOR PAGE]",M2)
+
+Lbl QU
+ClrHome
+Prompt A
+Prompt B
+Prompt C
+
+((­B+√(B²-4AC))/(2A))→X
+((­B-√(B²-4AC))/(2A))→Y
+
+Disp "ROOTS EQUAL:",XFrac,YFrac
+Pause 
+Goto M
+
+Lbl RC
+ClrHome
+Disp "1ST POINT"
+Prompt X
+Prompt Y
+Disp "2ND POINT"
+Prompt Z
+Prompt S
+
+((S-Y)/(Z-X))→M
+
+Disp "SLOPE:",M
+Pause 
+Goto M
+
+Lbl SS
+Menu("SELECT TASK","NTH TERM (A)",23,"SUM SERIES (A)",24,"NTH TERM (G)",25,"SUM SERIES (G)",26,"INF. SERIES",27,"[HOME MENU]",M)
+
+Lbl 23
+ClrHome
+Disp "1ST TERM:"
+Prompt X
+Disp "TERMS:"
+Prompt N
+Disp "DIFF:"
+Prompt D
+
+(X+((N-1)D))→A
+Disp AFrac
+Pause 
+Goto M
+
+Lbl 24
+ClrHome
+Disp "TERMS"
+Prompt N
+Disp "FIRST TERM"
+Prompt X
+Disp "LAST TERM"
+Prompt Y
+
+((N/2)*(X+Y))→A
+Disp A
+Pause 
+Goto M
+
+Lbl 25
+ClrHome
+Disp "FIRST TERM:"
+Prompt X
+Disp "TERMS:"
+Prompt N
+Disp "RATIO:"
+Prompt R
+
+(X*(R^(N-1)))→A
+Disp A
+Pause 
+Goto M
+
+Lbl 26
+ClrHome
+Disp "FIRST TERM:"
+Prompt X
+Disp "RATIO:"
+Prompt R
+Disp "TERMS:"
+Prompt N
+
+(X(1-R^N))/(1-R)→Y
+Disp Y
+Pause 
+Goto M
+
+Lbl 27
+ClrHome
+Disp "FIRST TERM:"
+Prompt X
+Disp "RATIO:"
+Prompt R
+
+(X/(1-R))→Y
+Disp Y
+Pause 
+Goto M
+
+
+
+Lbl SR
+ClrHome
+Lbl 33
+ClrHome
+Disp "√(X)"
+Input "X=",X
+iPart(√(X)+1)→A
+Lbl 31
+If fPart(X/A²)=0
+Then
+Goto 32
+Else
+(A-1)→A
+Goto 31
+Lbl 32
+ClrHome
+Disp "ANSWER: X√(N)"
+Disp "X=",A
+Disp "N=",X/A²
+Pause 
+Goto M
+
+Lbl M4
+Menu("HOME MENU:","SOLVE FOR X",SX,"SUM/DIFF. EQ.",SC,"SYNTHETIC DIV.",SD,"[PRIOR PAGE]",M3)
+
+
+Lbl SC
+ClrHome
+Disp "SUM OF CUBES:"
+Disp "(A^3)+(B^3) ="
+Disp "(A+B)(A²-AB+B²)"
+Disp " "
+Disp "DIFF. OF CUBES:"
+Disp "(A^3)-(B^3) ="
+Disp "(A-B)(A²+AB+B²)"
+Pause 
+ClrHome
+Disp "DIFF. OF SQUARE:"
+Disp "(A²-B²)"
+Disp "= (A-B)(A+B)"
+Pause 
+Goto M
+
+Lbl SD
+ClrHome
+Disp "FACTOR:"
+Prompt X
+Disp "COEFFICENTS:"
+Disp " "
+Disp "4TH POWER:"
+Prompt A
+Disp "3RD POWER:"
+Prompt B
+Disp "2ND POWER:"
+Prompt C
+Disp "1ST POWER:"
+Prompt D
+Disp "CONSTANT:"
+Prompt E
+
+(B+(A*X))→G
+(C+(G*X))→H
+(D+(H*X))→I
+(E+(I*X))→J
+
+ClrHome
+Disp A,G,H,I,J
+Pause 
+Goto M
+
+Lbl SX
+ClrHome
+Menu("SOLVE WHAT?","2 STEP",28,"SYSTEMS",29,"EQ = EQ",30,"[GO BACK]",M)
+
+Lbl 28
+ClrHome
+Disp "AX+B=C"
+Prompt A
+Prompt B
+Prompt C
+
+(C-B)→Y
+(Y/A)→X
+
+Disp X
+Pause 
+Goto M
+
+Lbl 29
+ClrHome
+Disp "AX+BY=C"
+Disp "Y=DX+E"
+Prompt A
+Prompt B
+Prompt C
+Prompt D
+Prompt E
+
+(C-(B*E))/(A+(BD))→X
+(D(X)+E)→Y
+
+Disp X,Y
+Pause 
+Goto M
+
+Lbl 30
+ClrHome
+Disp "AX+B=CX+D"
+Prompt A
+Prompt B
+Prompt C
+Prompt D
+
+(B-D)/(C-A)→X
+Disp X
+Pause 
+Goto M
+
